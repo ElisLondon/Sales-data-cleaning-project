@@ -1,81 +1,52 @@
-# Sales-data-cleaning-project
-Cleaning sales data for future analysis
+# E-Commerce Sales Data Cleaning Project
+## Cleaning sales data for future analysis
 
-🧱 1. Start with the problem
-This sets the scene and shows you understand real‑world data challenges.
+### Goal:
+This project focuses on transforming a **messy sales dataset** containing issues such as missing values, inconsistent date formats, duplicate records, and incorrect data types. The goal was to build a **reproducible SQL cleaning pipeline** that standardises the dataset, ensures accuracy, and prepares it for downstream analysis.
 
-Example:
+### Entity Relationship Diagram:
 
-“This project focuses on transforming a raw sales dataset containing common real‑world issues such as missing values, inconsistent date formats, duplicate records, and incorrect data types.”
+<img width="940" height="435" alt="image" src="https://github.com/user-attachments/assets/346b3786-1ec9-4108-ae18-1b3c4d30b56f" />
 
-This immediately signals:
-✔ You know what messy data looks like
-✔ You can diagnose problems
-✔ You’re not just running code — you’re thinking like an analyst
 
-🧼 2. Explain your cleaning goals
-This shows intentionality, not just random cleaning steps.
 
-Example:
+### Cleaning Steps:
+All cleaning steps were implemented in a reusable SQL pipeline, allowing the process to be applied to future datasets with minimal modification.
+1) Identified and removed duplicate transactions
+2) Standardised inconsistent data entries and date formats
+3) Converted incorrect data types to appropriate formats
+4) Handled missing values and nulls using domain logic
+5) Validated totals and cross checked against expected ranges
 
-“The goal was to build a reproducible cleaning pipeline that standardises the dataset, ensures accuracy, and prepares it for downstream analysis.”
+<img width="250" height="677" alt="image" src="https://github.com/user-attachments/assets/7ca380e8-9345-47b9-b0ae-c286427c8de7" />
 
-This frames you as someone who works systematically.
 
-🛠️ 3. Describe the cleaning steps in a structured way
-Break it into clear, readable sections. Recruiters love this.
+### Data Summary:
+| Metric | Before Cleaning | After Cleaning |
+|--------|------------------|----------------|
+| Total Rows | 21,864 | 21,795 |
+| Duplicate Rows | 54 | 0 |
+| Missing Values | 13% | 7% |
+| Product Label Variants | 61 inconsistencies | Fully standardised |
+| Date Formats | 4 formats | 1 format |
+| Data Type Issues | Several incorrect types | All corrected |
 
-Example:
 
-Cleaning Steps
-Identified and removed duplicate transactions
+### Results:
+- Reduced 69 duplicate rows
+- Standardised 61 inconsistent product labels
+- Fixed 4 different date formats
+- Improved data completeness from 87% to 93%
+- Produced a clean dataset ready for KPI analysis
 
-Standardised date formats to YYYY‑MM‑DD
+### Summary:
+This project demonstrates my ability to work with imperfect real world data, design cleaning logic, and building reusable cleaning processes that support accurate analysis. It highlights my SQL skils, attention to detail, and an understanding of data quality best practices that I can bring to more complex datasets.
 
-Corrected inconsistent product names using mapping rules
+### Planned next steps:
+- Perform EDA on the cleaned dataset to explore trends
+- Create a report of the analysis and infer recommendations that could be made to specific company teams to help increase revenue
+- Build a Tableau dashboard to highlight the key findings for stakeholders
+- Parametise the SQL pipeline for different datasets
+- Add logging and error handling for improved robustness
 
-Handled missing values using imputation and domain logic
 
-Converted data types (e.g., strings → integers, floats)
-
-Created new fields (e.g., cleaned revenue, standardised categories)
-
-Validated totals and cross‑checked against expected ranges
-
-This shows depth and technical competence.
-
-🔁 4. Highlight reproducibility
-This is a huge green flag for employers.
-
-Example:
-
-“All cleaning steps were implemented in a reusable Python pipeline using pandas, allowing the process to be applied to future datasets with minimal modification.”
-
-This makes you look like someone who thinks beyond one‑off scripts.
-
-📊 5. Show the before/after impact
-This is where you demonstrate value.
-
-Example:
-
-Results
-Reduced 3,200 duplicate rows
-
-Standardised 12 inconsistent product labels
-
-Fixed 8 different date formats
-
-Improved data completeness from 87% to 99%
-
-Produced a clean dataset ready for KPI analysis
-
-Even if the numbers are approximate, the structure is perfect.
-
-🧠 6. Add a short reflection
-This is where you show maturity and awareness.
-
-Example:
-
-“This project demonstrates my ability to work with imperfect real‑world data, design cleaning logic, and build reliable pipelines that support accurate analysis.”
-
-This ties the whole narrative together.
